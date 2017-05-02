@@ -12,7 +12,7 @@ stages:
     services:
       - docker:dind
     only:
-      - master
+      - latest
       - /^\d+(\.\d{1,2})?$/
     tags:
       - docker
