@@ -17,8 +17,8 @@ build:docker-image:
       - docker build -t $CI_REGISTRY_IMAGE_WITH_TAG --no-cache=true .
       - docker push $CI_REGISTRY_IMAGE_WITH_TAG
     only:
-      - master
-      - 1.0
+      - "master"
+      - "1.0"
     tags:
       - docker
 
@@ -34,7 +34,7 @@ deploy:docker-image:
       - docker tag $CI_REGISTRY_IMAGE_WITH_TAG $DOCKER_HUB_IMAGE_WITH_TAG
       - docker push $DOCKER_HUB_IMAGE_WITH_TAG
     only:
-      - master
-      - 1.0
+      - "master"
+      - "1.0"
     tags:
       - docker
